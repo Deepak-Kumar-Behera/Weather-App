@@ -1,0 +1,251 @@
+*, ::after, ::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Merriweather Sans', sans-serif;
+}
+
+:root {
+    --colorDark1: #112D4E;
+    --colorDark2: #3F72AF;
+    --colorLight1: #DBE2EF;
+    --colorLight2: #F9F7F7;
+}
+
+.wrapper {
+    width: 100vw;
+    height: 100vh;
+    overflow-x: hidden;
+    color: var(--colorLight2);
+    background-image: linear-gradient(160deg, #112d4e 0%, #3f72af 100%);
+}
+
+h1 {
+    text-align: center;
+    text-transform: uppercase;
+    padding-top: 20px;
+}
+
+.tab-container {
+    width: 90%;
+    max-width: 550px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 4rem;
+}
+
+.tab {
+    cursor: pointer;
+    font-size: 0.875;
+    letter-spacing: 1.75px;
+    padding: 5px 8px;
+}
+
+.tab.current-tab {
+    background-color: rgba(219, 226, 239, 0.5);
+    border-radius: 4px;
+}
+
+.weather-container {
+    /* width: 90%;
+    max-width: 550px; */
+    margin: 4rem auto;
+
+}
+
+.sub-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.grant-location {
+    display: none;
+}
+
+.grant-location.active {
+    display: flex;
+}
+
+.grant-location img {
+    margin-bottom: 2rem;
+}
+
+.grant-location p:first-of-type{
+    font-size: 1.75rem;
+    font-weight: 600;
+}
+
+.grant-location P:last-of-type{
+    font-size:0.85rem;
+    font-weight: 500;
+    margin-top: 0.75rem;
+    margin-bottom: 1.75rem;
+    letter-spacing: 0.75px;
+}
+
+.btn {
+    all: unset;
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    border-radius: 5px;
+    background-color: var(--colorDark2);
+    cursor: pointer;
+    padding: 10px 30px;
+}
+
+.loading-screen-container {
+    display: none;
+}
+
+.loading-screen-container.active {
+    display: flex;
+}
+
+.loading-screen-container p {
+    text-transform: uppercase;
+}
+
+.weather-info-container {
+    display: none;
+}
+
+.weather-info-container.active {
+    display: flex;
+}
+
+.name {
+    display: flex;
+    align-items: center;
+    gap: 0 0.5rem;
+    margin-bottom: 1rem;
+}
+
+.weather-info-container p {
+    font-size: 1.5rem;
+    font-weight: 200;
+    text-transform: capitalize;
+}
+
+.weather-info-container img {
+    height: 90px;
+    width: 90px;
+}
+
+.name p {
+    font-size: 2rem;
+}
+
+.name img {
+    width: 30px;
+    height: 30px;
+    object-fit: contain;
+}
+
+.weather-info-container p[data-temperature] {
+    font-size: 2.75rem;
+    font-weight: 700;
+}
+
+.parameter-container {
+    display: flex;
+    width: 90%;
+    margin: 0 auto;
+    gap: 10px 20px;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2rem;
+}
+
+.parameter {
+    width: 30%;
+    width: 200px;
+    background-color: rgba(219, 226, 239, 0.5);;
+    border-radius: 5px;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 5px 0;
+    align-items: center;
+}
+
+.parameter img {
+    height: 50px;
+    width: 50px;
+}
+
+.parameter p:first-of-type {
+    font-size: 1.5rem;
+    font-weight: 200;
+    text-transform: uppercase;
+}
+
+.parameter p:last-of-type {
+    font-size: 1.5rem;
+    font-weight: 200;
+}
+
+.search-form-container {
+    display:  none;
+    /* display: flex; */
+    width: 90%;
+    max-width: 550px;
+    margin: 0 auto;
+    justify-content: center;
+    align-items: center;
+    gap: 0 10px;
+    margin-bottom: 3rem;
+}
+
+.search-form-container.active {
+    display: flex;
+}
+
+.search-form-container input {
+    all: unset;
+    width: calc(100% - 80px);
+    height: 40px;
+    padding: 0 20px;
+    background-color:rgba(219, 226, 239, 0.5);
+    border-radius: 10px;
+}
+
+.search-form-container input::placeholder {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.search-form-container input:focus {
+    outline: 3px solid rgba(255, 255, 255, 0.7);
+}
+
+.search-form-container .btn {
+    padding: unset;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 100%;
+}
+
+.error-msg {
+    display: none;
+}
+
+.error-msg.active {
+    display: flex;
+}
+
+@media (max-width: 768px) {
+    .parameter-container {
+        display: flex;
+        width: 90%;
+        margin: 0 auto;
+        gap: 10px 20px;
+        justify-content: center;
+        align-items: center;
+        margin-top: 2rem;
+        flex-direction: column;
+    }
+}
